@@ -13,14 +13,6 @@ http://sqlitebrowser.org/
 This program crawls a web site and pulls a series of pages into the
 database, recording the links between pages.
 
-Note: Windows has difficulty in displaying UTF-8 characters
-in the console so for each console window you open, you may need
-to type the following command before running this code:
-
-    chcp 65001
-
-http://stackoverflow.com/questions/388490/unicode-characters-in-windows-command-line-how
-
 Mac: rm spider.sqlite
 Mac: python3 spider.py
 
@@ -61,11 +53,6 @@ run spdump.py as follows:
 
 Mac: python3 spdump.py 
 Win: spdump.py
-
-(5, None, 1.0, 3, u'http://www.dr-chuck.com/csev-blog')
-(3, None, 1.0, 4, u'http://www.dr-chuck.com/dr-chuck/resume/speaking.htm')
-(1, None, 1.0, 2, u'http://www.dr-chuck.com/csev-blog/')
-(1, None, 1.0, 5, u'http://www.dr-chuck.com/dr-chuck/resume/index.htm')
 4 rows.
 
 This shows the number of incoming links, the old page rank, the new page
@@ -88,11 +75,6 @@ You can dump the database again to see that page rank has been updated:
 
 Mac: python3 spdump.py 
 Win: spdump.py 
-
-(5, 1.0, 0.985, 3, u'http://www.dr-chuck.com/csev-blog')
-(3, 1.0, 2.135, 4, u'http://www.dr-chuck.com/dr-chuck/resume/speaking.htm')
-(1, 1.0, 0.659, 2, u'http://www.dr-chuck.com/csev-blog/')
-(1, 1.0, 0.659, 5, u'http://www.dr-chuck.com/dr-chuck/resume/index.htm')
 4 rows.
 
 You can run sprank.py as many times as you like and it will simply refine
@@ -152,10 +134,5 @@ This shows an automatic layout of the nodes and links.  You can click and
 drag any node and you can also double click on a node to find the URL
 that is represented by the node.
 
-This visualization is provided using the force layout from:
-
-http://mbostock.github.com/d3/
-
 If you rerun the other utilities and then re-run spjson.py - you merely
 have to press refresh in the browser to get the new data from spider.js.
-
